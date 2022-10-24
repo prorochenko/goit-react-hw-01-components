@@ -1,17 +1,21 @@
-import Profile from './profile/Profile';
+import Profile from './Profile/Profile';
 import user from '../user.json';
-import StatiscticList from './statistics/StatisticList';
+import StatiscticList from './Statistics/StatisticList';
 import data from '../data.json';
+import FriendList from './FriendList/FriendList';
+import friends from '../friends.json';
+import TransactionHistory from './Transactions/TransactionList';
+import transactions from '../transactions.json';
 
 export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
+        flexDirection: 'column',
+        fontSize: 24,
         color: '#010101',
       }}
     >
@@ -26,6 +30,8 @@ export const App = () => {
       />
       <StatiscticList title="Upload stats" stats={data} />
       <StatiscticList stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory transactions={transactions} />
     </div>
   );
 };
