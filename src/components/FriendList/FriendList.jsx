@@ -1,8 +1,9 @@
 import Friends from './friends';
+import css from './friendList.module.css';
 
 export default function FriendList({ friends }) {
   const elements = friends.map(friend => (
-    <li key={friend.id}>
+    <li key={friend.id} className={css.item}>
       <Friends
         avatar={friend.avatar}
         name={friend.name}
@@ -12,5 +13,9 @@ export default function FriendList({ friends }) {
     </li>
   ));
 
-  return <ul className="friend-list">{elements}</ul>;
+  return (
+    <section className={css.friends}>
+      <ul className={css.container}> {elements}</ul>
+    </section>
+  );
 }

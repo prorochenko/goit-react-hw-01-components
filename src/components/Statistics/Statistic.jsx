@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './statistic.css';
+import css from './statistic.module.css';
 
 export default function Statistic(props) {
   const { label, percentage } = props;
@@ -8,18 +8,17 @@ export default function Statistic(props) {
 
   return (
     <li
-      className="stat-list__item"
+      className={css.statList__item}
       style={{ backgroundColor: `${randomColor}` }}
     >
-      <span className="label">{label}</span>
-      <span className="percentage">{percentage}%</span>
+      <span className={css.label}>{label}</span>
+      <span className={css.percentage}>{percentage}%</span>
     </li>
   );
 }
 
 Statistic.propTypes = {
   title: PropTypes.string,
-  id: PropTypes.string,
   label: PropTypes.string,
   percentage: PropTypes.number,
 };

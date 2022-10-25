@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './transactions.css';
+import css from './transactions.module.css';
 
 export default function Transactions(props) {
   const { id, type, amount, currency } = props;

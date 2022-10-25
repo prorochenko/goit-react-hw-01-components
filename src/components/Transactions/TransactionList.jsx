@@ -1,4 +1,6 @@
 import Transactions from './Transactions';
+import css from './transactions.module.css';
+
 export default function TransactionHistory({ transactions }) {
   const elements = transactions.map(transaction => (
     <Transactions
@@ -10,15 +12,17 @@ export default function TransactionHistory({ transactions }) {
   ));
 
   return (
-    <table className="transaction-history">
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
-      </thead>
-      <tbody>{elements}</tbody>
-    </table>
+    <section className={css.transaction}>
+      <table className={css.transactionHistory}>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Currency</th>
+          </tr>
+        </thead>
+        <tbody>{elements}</tbody>
+      </table>
+    </section>
   );
 }
