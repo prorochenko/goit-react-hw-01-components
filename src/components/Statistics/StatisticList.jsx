@@ -10,7 +10,7 @@ export default function StatiscticList({ title, stats }) {
   ));
   return (
     <section className={css.statistics}>
-      <div div className={css.container}>
+      <div className={css.container}>
         {title && <h2 className={css.title}>{title}</h2>}
         <ul className={css.statList}>{elements}</ul>
       </div>
