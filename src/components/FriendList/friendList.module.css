@@ -36,7 +36,8 @@
   width: 300px;
   justify-content: center;
 }
-.item:hover {
+.item:hover,
+.item:focus {
   color: rgb(81, 202, 6);
   box-shadow: 3px 3px rgb(241, 253, 133), -1em 0 0.4em rgb(226, 242, 148);
 }

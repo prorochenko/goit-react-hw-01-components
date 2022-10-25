@@ -10,7 +10,6 @@
 .container {
   width: 500px;
   background-color: beige;
-
 }
 
 .title {
@@ -44,4 +43,12 @@
   padding-right: 0;
   padding-left: 0;
   fill-opacity: 0.3;
+
+  box-shadow: 0 0 0 0 rgb(199, 168, 130);
+}
+
+.statList__item:hover,
+.statList__item:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em rgb(175, 116, 44);
+  transform: translateY(-0.25em);
 }
