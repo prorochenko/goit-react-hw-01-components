@@ -1,5 +1,4 @@
 import Transactions from './Transactions';
-
 export default function TransactionHistory({ transactions }) {
   const elements = transactions.map(transaction => (
     <Transactions
