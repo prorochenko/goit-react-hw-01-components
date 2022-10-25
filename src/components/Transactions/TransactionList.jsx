@@ -22,7 +22,7 @@ export default function TransactionHistory({ transactions }) {
             <th>Currency</th>
           </tr>
         </thead>
-        <tbody>{elements}</tbody>
+        <tbody className={css.tableElemets}>{elements}</tbody>
       </table>
     </section>
   );

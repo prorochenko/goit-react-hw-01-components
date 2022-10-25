@@ -10,6 +10,7 @@
 .transactionHistory {
   width: 500px;
   background-color: beige;
+  border-radius: 25px;
 }
 
 .title {
@@ -23,4 +24,8 @@
 
 .header {
   background-color: antiquewhite;
+}
+
+.tableElemets tr:nth-child(2n) {
+  background-color: #efebd4;
 }

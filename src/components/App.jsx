@@ -19,6 +19,7 @@ export const App = () => {
         color: '#010101',
       }}
     >
+      Task 1
       <Profile
         username={user.username}
         avatar={user.avatar}
@@ -28,9 +29,12 @@ export const App = () => {
         views={user.stats.views}
         likes={user.stats.likes}
       />
+      Task 2
       <StatiscticList title="Upload stats" stats={data} />
       <StatiscticList stats={data} />
+      Task 3
       <FriendList friends={friends} />
+      Task 4
       <TransactionHistory transactions={transactions} />
     </div>
   );
