@@ -4,9 +4,9 @@ import css from './statistic.module.css';
 
 export default function StatiscticList({ title, stats }) {
   const elements = stats.map(stat => (
-    <li key={stat.id}>
+    <div key={stat.id}>
       <Statistic label={stat.label} percentage={stat.percentage} />
-    </li>
+    </div>
   ));
   return (
     <section className={css.statistics}>

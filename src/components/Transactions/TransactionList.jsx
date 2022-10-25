@@ -3,18 +3,19 @@ import css from './transactions.module.css';
 
 export default function TransactionHistory({ transactions }) {
   const elements = transactions.map(transaction => (
-    <Transactions
-      id={transaction.id}
-      type={transaction.type}
-      amount={transaction.amount}
-      currency={transaction.currency}
-    />
+    <tr key={transaction.id}>
+      <Transactions
+        type={transaction.type}
+        amount={transaction.amount}
+        currency={transaction.currency}
+      />
+    </tr>
   ));
 
   return (
     <section className={css.transaction}>
       <table className={css.transactionHistory}>
-        <thead>
+        <thead className={css.header}>
           <tr>
             <th>Type</th>
             <th>Amount</th>
