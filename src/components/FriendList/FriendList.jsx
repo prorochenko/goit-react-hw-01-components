@@ -1,21 +1,21 @@
 import Friends from './friends';
-import css from './friendList.module.css';
+import { Friend, Container, Item } from './FriendList.styled';
 
 export default function FriendList({ friends }) {
   const elements = friends.map(friend => (
-    <li key={friend.id} className={css.item}>
+    <Item key={friend.id}>
       <Friends
         avatar={friend.avatar}
         name={friend.name}
         isOnline={friend.isOnline}
         id={friend.is}
       />
-    </li>
+    </Item>
   ));
 
   return (
-    <section className={css.friends}>
-      <ul className={css.container}> {elements}</ul>
-    </section>
+    <Friend>
+      <Container> {elements}</Container>
+    </Friend>
   );
 }
